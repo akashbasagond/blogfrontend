@@ -51,7 +51,7 @@ export const Category = () => {
     <>
       <section className='category'>
         <div className='content'>
-          <Slider {...settings}>
+          {/* <Slider {...settings}>
             {category.map((item) => (
               <div className='boxs'>
                 <div className='box' key={item.id}>
@@ -63,7 +63,7 @@ export const Category = () => {
                 </div>
               </div>
             ))}
-          </Slider>
+          </Slider> */}
         </div>
       </section>
     </>

@@ -1,8 +1,8 @@
 .blog {
-  margin: 50px 0;
+  margin: 10px 0;
 }
 .blog .boxItems {
-  transition: 0.5s;
+  transition: 0.1s;
 }
 .blog .boxItems:hover {
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);

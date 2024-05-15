@@ -1,18 +1,45 @@
-import React from "react"
-import "./create.css"
-import { IoIosAddCircleOutline } from "react-icons/io"
+import React, { useState } from "react";
+import "./create.css";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 export const Create = () => {
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImagePreview(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <>
       <section className='newPost'>
         <div className='container boxItems'>
-          <div className='img '>
-            <img src='https://images.pexels.com/photos/6424244/pexels-photo-6424244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='image' class='image-preview' />
+          <div className='img'>
+            {imagePreview ? (
+              <img src={imagePreview} alt='Preview' className='image-preview' />
+            ) : (
+              <div className='image-placeholder'>
+                <IoIosAddCircleOutline />
+                <span>Upload Image</span>
+              </div>
+            )}
           </div>
           <form>
             <div className='inputfile flexCenter'>
-              <input type='file' accept='image/*' alt='img' />
+              <input
+                type='file'
+                accept='image/*'
+                alt='img'
+                onChange={handleImageChange}
+              />
             </div>
             <input type='text' placeholder='Title' />
 
@@ -23,5 +50,5 @@ export const Create = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};

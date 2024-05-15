@@ -150,7 +150,7 @@ const Contacts = () => {
 
                 <button 
                   disabled={disabled}
-                  type='submit' style={{borderRadius: "4rem",backgroundColor:'#70E1B6',width:"10rem",height:"3rem",justifyContent:"center"}}
+                  type='submit' style={{borderRadius: "4rem",backgroundColor:'#70E1B6',width:"10rem",height:"3rem",justifyContent:"center",marginLeft:"160px"}}
                 >
                   Submit
                 </button>
