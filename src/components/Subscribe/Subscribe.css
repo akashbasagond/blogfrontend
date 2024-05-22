@@ -10,16 +10,26 @@
     position: relative;
     justify-content: center;
     margin-top: 0%;
-    width: 50%;
+    width: 40%;
     height: 40px;
     padding: 0;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .subscription .add-email {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 100px); /* Adjust width to leave space for button */
+    width: calc(100% - 100px); 
     height: 100%;
     border: none;
     outline: none;

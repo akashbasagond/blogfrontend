@@ -78,6 +78,6 @@ header.active {
     display: none;
   }
   nav {
-    display: none;
+    /* display: none; */
   }
 }
